@@ -13,17 +13,28 @@
 		
 			<h1>Olá JSF</h1>
 			Nome: <h:inputText id="nome" value="#{pessoaBean.nome}" />
-			
-			<br/>
+			 
+			<br />
 			Sobrenome: <h:inputText id="sobrenome" value="#{pessoaBean.sobrenome}" />			 
 			
-			<br/>
+			<br />
 			
 			<h:outputText value="#{pessoaBean.nomeCompleto}" />
 			
-			<br/>
+			<br />
 			
 			<h:commandButton value="Mostrar nome completo" action="#{pessoaBean.mostrarNomeCompleto}"/>
+			
+			<br />
+			
+			<h:commandButton value="Adicionar nome" action="#{pessoaBean.adicionarNome}"/>
+			
+			<h:dataTable value="#{pessoaBean.nomes}" var="nome">
+				<h:column>
+					<h:outputText value="#{nome}" />
+				</h:column>
+			</h:dataTable>
+			
 		</h:form>
 	</h:body>
 	
