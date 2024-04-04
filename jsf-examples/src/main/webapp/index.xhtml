@@ -19,15 +19,27 @@
 			
 			<br />
 			
+			<h:inputSecret id="senha" value="#{pessoaBean.senha}" />
+			
+			<br />	
+			
+			<h:inputTextarea id="texto" 
+							 value="#{pessoaBean.texto}"
+							 rows="10"
+							 cols="10" />		
+			
 			<h:outputText value="#{pessoaBean.nomeCompleto}" />
 			
 			<br />
 			
-			<h:commandButton value="Mostrar nome completo" action="#{pessoaBean.mostrarNomeCompleto}"/>
+			<h:commandButton value="Mostrar nome completo" 
+							 action="#{pessoaBean.mostrarNomeCompleto}" />
 			
 			<br />
 			
-			<h:commandButton value="Adicionar nome" action="#{pessoaBean.adicionarNome}"/>
+			<h:commandButton value="Adicionar nome" 
+							 action="#{pessoaBean.adicionarNome}"
+							 binding="#{pessoaBean.commandButton}" />
 			
 			<h:dataTable value="#{pessoaBean.nomes}" var="nome">
 				<h:column>

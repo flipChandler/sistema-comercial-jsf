@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head>
+		<title>Olá JSF</title>
+		
+		<script>
+			function alterarValorDoCampo() {
+				let campo = document.getElementById('formPessoa:nome');
+				campo.value = 'Eu cliquei no campo!';
+			}
+		</script>
+	</h:head>
+	
+	<h:body>
+	
+		<h:form id="formPessoa">
+		
+			<h1>Olá JSF other page - Navegação Implícita</h1>
+			<h:inputText id="nome" />
+			<h:commandButton value="Alterar Valor do Campo" onclick="alterarValorDoCampo();" />
+			
+			<h:commandButton value="Ir para página Index" action="index" />
+			
+		</h:form>
+	</h:body>
+	
+</html>
